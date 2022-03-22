@@ -11,6 +11,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using SalesWebMvcVersion.Data;
+using SalesWebMvcVersion.Services;
 
 namespace SalesWebMvcVersion
 {
@@ -41,6 +42,7 @@ namespace SalesWebMvcVersion
                         builder.MigrationsAssembly("SalesWebMvcVersion")));
 
             services.AddScoped<SeedingService>();
+            services.AddScoped<SellerService>();
 
         }
 
