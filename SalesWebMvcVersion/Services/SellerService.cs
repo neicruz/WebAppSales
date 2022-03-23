@@ -40,7 +40,7 @@ namespace SalesWebMvcVersion.Services
             }
             catch (DbUpdateException e)
             {
-                throw new IntegrityExceptions("Impossible: has sales");
+                throw new IntegrityExceptions(e.Message);
             }
         }
 
